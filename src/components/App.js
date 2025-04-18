@@ -13,13 +13,11 @@ function App() {
     setDarkMode((prevMode) => !prevMode)
   }
 
-
-
   return (
     <div className={appClass}>
       <header>
         <h2>Shopster</h2>
-        <button onClick={switchTheme}>Dark Mode</button>
+        <button onClick={switchTheme}>{darkMode ? "Light Mode" : "Dark Mode"}</button>
       </header>
       <ShoppingList items={itemData} />
     </div>
